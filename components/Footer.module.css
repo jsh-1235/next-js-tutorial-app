@@ -5,7 +5,9 @@
   align-content: center;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  font-size: 3rem;
+  height: 5vh;
+  background-color: #00a5e0;
+  color: white;
+  font-size: 0.5rem;
   text-transform: uppercase;
 }

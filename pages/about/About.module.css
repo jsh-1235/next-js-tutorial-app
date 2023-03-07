@@ -1,0 +1,91 @@
+.wrapper {
+  width: var(--page-width);
+  height: 100%;
+  color: white;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.header {
+  height: 20vh;
+  background-color: #333;
+  font-size: 2rem;
+  line-height: 20vh;
+  text-align: center;
+}
+
+.main {
+  display: grid;
+  gap: 0px 0px;
+  align-content: stretch;
+  justify-content: stretch;
+  align-items: stretch;
+  justify-items: stretch;
+  align-self: stretch;
+  justify-self: stretch;
+  height: calc(100% - 30vh);
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #444;
+  font-size: 2rem;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #555;
+  font-size: 2rem;
+}
+
+.footer {
+  height: 10vh;
+  background-color: #666;
+  font-size: 2rem;
+  line-height: 10vh;
+  text-align: center;
+}
+
+.footer>a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+@media(hover: hover) and (pointer: fine) {
+  .footer>a:hover {
+    color: #fecef1;
+  }
+}
+
+/* 1000px 이하일 때 적용 */
+@media (max-width: 1000px) {
+  .wrapper {
+    --page-width: 100%;
+  }
+
+  .main {
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+/* 1000px 이상일 때 적용 */
+@media (min-width: 1000px) {
+  .wrapper {
+    --page-width: 1000px;
+  }
+
+  .main {
+    grid-template-columns: 20% 1fr;
+  }
+}

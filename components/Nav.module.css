@@ -1,0 +1,22 @@
+.container {
+  height: 10vh;
+  display: flex;
+  flex-direction: rows;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: start;
+  align-items: center;
+  background-color: #00a5e0;
+  font-size: 1rem;
+}
+
+.link {
+  color: white;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .link {
+    font-size: 0.5rem;
+  }
+}
