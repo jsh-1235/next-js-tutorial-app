@@ -30,17 +30,22 @@ function SSR({ posts }) {
 }
 
 export async function getServerSideProps() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
 
-  const posts = await response.json();
+    const posts = await response.json();
 
-  // console.log(posts);
+    // console.log(posts);
 
-  return {
-    props: {
-      posts,
-    },
-  };
+    return {
+      props: {
+        posts,
+      },
+    };
+  } catch (error) {
+    console.log(error);
+    return { props: {} };
+  }
 }
 
 export default SSR;
